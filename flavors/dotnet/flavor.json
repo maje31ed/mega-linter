@@ -1,6 +1,7 @@
 {
     "descriptors": [
         "CSHARP",
+        "GIT",
         "POWERSHELL"
     ],
     "label": "Mega-Linter optimized for C, C++, C# or VB based projects",
@@ -20,6 +21,7 @@
         "DOCKERFILE_HADOLINT",
         "EDITORCONFIG_EDITORCONFIG_CHECKER",
         "ENV_DOTENV_LINTER",
+        "GIT_GIT_DIFF",
         "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
         "GROOVY_NPM_GROOVY_LINT",
         "HTML_HTMLHINT",

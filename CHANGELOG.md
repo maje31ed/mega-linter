@@ -5,6 +5,7 @@
 Note: Can be used using nvuillam/mega-linter@insiders in your mega-linter.yml file
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - Add Vue.js linting (eslint-plugin-vue added in dependencies)
 
 - Fix error message from Email Reporter when SMTP password is not set
@@ -27,6 +28,31 @@ Note: Can be used using nvuillam/mega-linter@insiders in your mega-linter.yml fi
   - Dynamically generate (build.py) the list of flavors in github actions workflows
   - Reorganize online documentation menus
 >>>>>>> FixGitHubReportersFromForks
+=======
+- Core
+  - Do not suggest flavors when Mega-Linter validates only the diff files (`VALIDATE_ALL_CODE_BASE: false`)
+  - Fix ConsoleReporter active linters table content
+  - Check if linter is able to fix before flagging it as a fixing linter during runtime
+
+- Doc
+  - Add docker pulls badge in flavors documentation
+  - Generate list of references to Mega-Linter
+
+## [4.17.0] 2020-12-18
+
+- Core
+  - Allow to use remote linters configuration files with LINTER_RULES_PATH
+  - Add `.jekyll-cache` in the list of ignored folders by default
+  - Arrange display of Flavor suggestions (text and order) in reporter logs
+- Build
+  - Dynamically generate (build.py) the list of flavors in github actions workflows
+- Doc
+  - Reorganize online documentation menus
+- Linters
+  - Add new linter git_diff to check for git conflicts markers
+  - Fix rakudo installation
+  - Fix phpstan installation
+>>>>>>> master
 
 ## [4.16.0] 2020-12-14
 

@@ -1,6 +1,8 @@
 {
     "dart": {
-        "descriptors": [],
+        "descriptors": [
+            "GIT"
+        ],
         "label": "Mega-Linter optimized for DART based projects",
         "linters": [
             "ANSIBLE_ANSIBLE_LINT",
@@ -15,6 +17,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
@@ -37,6 +40,7 @@
     "dotnet": {
         "descriptors": [
             "CSHARP",
+            "GIT",
             "POWERSHELL"
         ],
         "label": "Mega-Linter optimized for C, C++, C# or VB based projects",
@@ -56,6 +60,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
@@ -79,6 +84,7 @@
     },
     "go": {
         "descriptors": [
+            "GIT",
             "GO"
         ],
         "label": "Mega-Linter optimized for GO based projects",
@@ -94,6 +100,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GO_GOLANGCI_LINT",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
@@ -116,6 +123,7 @@
     },
     "java": {
         "descriptors": [
+            "GIT",
             "JAVA"
         ],
         "label": "Mega-Linter optimized for JAVA based projects",
@@ -131,6 +139,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
@@ -153,6 +162,7 @@
     },
     "javascript": {
         "descriptors": [
+            "GIT",
             "JAVASCRIPT",
             "TYPESCRIPT"
         ],
@@ -170,6 +180,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
@@ -197,6 +208,7 @@
     },
     "php": {
         "descriptors": [
+            "GIT",
             "PHP"
         ],
         "label": "Mega-Linter optimized for PHP based projects",
@@ -212,6 +224,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
@@ -236,7 +249,9 @@
         ]
     },
     "python": {
-        "descriptors": [],
+        "descriptors": [
+            "GIT"
+        ],
         "label": "Mega-Linter optimized for PYTHON based projects",
         "linters": [
             "ANSIBLE_ANSIBLE_LINT",
@@ -250,6 +265,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
@@ -278,6 +294,7 @@
     },
     "ruby": {
         "descriptors": [
+            "GIT",
             "RUBY"
         ],
         "label": "Mega-Linter optimized for RUBY based projects",
@@ -293,6 +310,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
@@ -315,6 +333,7 @@
     },
     "rust": {
         "descriptors": [
+            "GIT",
             "RUST"
         ],
         "label": "Mega-Linter optimized for RUST based projects",
@@ -330,6 +349,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
@@ -352,6 +372,7 @@
     },
     "scala": {
         "descriptors": [
+            "GIT",
             "SCALA"
         ],
         "label": "Mega-Linter optimized for SCALA based projects",
@@ -367,6 +388,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
@@ -388,7 +410,9 @@
         ]
     },
     "terraform": {
-        "descriptors": [],
+        "descriptors": [
+            "GIT"
+        ],
         "label": "Mega-Linter optimized for TERRAFORM based projects",
         "linters": [
             "ANSIBLE_ANSIBLE_LINT",
@@ -402,6 +426,7 @@
             "DOCKERFILE_HADOLINT",
             "EDITORCONFIG_EDITORCONFIG_CHECKER",
             "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
             "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",

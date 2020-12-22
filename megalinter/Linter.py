@@ -144,7 +144,9 @@ class Linter:
             self.show_elapsed_time = params.get("show_elapsed_time", False)
             # Manage apply fixes flag on linter
             param_apply_fixes = params.get("apply_fixes", "none")
-            if param_apply_fixes == "all" or (
+            if self.cli_lint_fix_arg_name is None:
+                self.apply_fixes = False
+            elif param_apply_fixes == "all" or (
                 isinstance(param_apply_fixes, bool) and param_apply_fixes is True
             ):
                 self.apply_fixes = True
@@ -293,9 +295,9 @@ class Linter:
             and self.config_file_name != "LINTER_DEFAULT"
         ):
             if self.linter_rules_path.startswith("http"):
-                remote_config_file = (
-                    self.linter_rules_path + "/" + self.config_file_name
-                )
+                if not self.linter_rules_path.endswith("/"):
+                    self.linter_rules_path += "/"
+                remote_config_file = self.linter_rules_path + self.config_file_name
                 local_config_file = self.workspace + os.path.sep + self.config_file_name
                 existing_before = os.path.isfile(local_config_file)
                 try:
@@ -308,9 +310,14 @@ class Linter:
                             self.remote_config_file_to_delete = local_config_file
                 except urllib.error.HTTPError as e:
                     self.config_file_error = (
-                        f"Unable to fetch {remote_config_file}\n{str(e)}"
+                        f"Unable to fetch {remote_config_file}\n{str(e)}\n"
+                        f" fallback to repository config or Mega-Linter default config"
                     )
-
+                except Exception as e:
+                    self.config_file_error = (
+                        f"Unable to fetch {remote_config_file}\n{str(e)}\n"
+                        f" fallback to repository config or Mega-Linter default config"
+                    )
             # in repo root (already here or fetched by code above)
             if os.path.isfile(self.workspace + os.path.sep + self.config_file_name):
                 self.config_file = self.workspace + os.path.sep + self.config_file_name
