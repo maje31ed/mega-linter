@@ -1,4 +1,22 @@
 {
+    "ci_light": {
+        "descriptors": [
+            "GIT"
+        ],
+        "label": "Mega-Linter optimized for CI items (Dockerfile, Jenkinsfile, JSON/YAML schemas,XML",
+        "linters": [
+            "DOCKERFILE_DOCKERFILELINT",
+            "DOCKERFILE_HADOLINT",
+            "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
+            "GROOVY_NPM_GROOVY_LINT",
+            "JSON_JSONLINT",
+            "JSON_V8R",
+            "XML_XMLLINT",
+            "YAML_YAMLLINT",
+            "YAML_V8R"
+        ]
+    },
     "dart": {
         "descriptors": [
             "GIT"
@@ -22,6 +40,7 @@
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -30,11 +49,53 @@
             "PROTOBUF_PROTOLINT",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
+        ]
+    },
+    "documentation": {
+        "descriptors": [
+            "GIT"
+        ],
+        "label": "Mega-Linter for documentation projects",
+        "linters": [
+            "ANSIBLE_ANSIBLE_LINT",
+            "BASH_EXEC",
+            "BASH_SHELLCHECK",
+            "BASH_SHFMT",
+            "COPYPASTE_JSCPD",
+            "CSS_STYLELINT",
+            "CSS_SCSS_LINT",
+            "DOCKERFILE_DOCKERFILELINT",
+            "DOCKERFILE_HADOLINT",
+            "EDITORCONFIG_EDITORCONFIG_CHECKER",
+            "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
+            "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
+            "GROOVY_NPM_GROOVY_LINT",
+            "HTML_HTMLHINT",
+            "JSON_JSONLINT",
+            "JSON_V8R",
+            "KOTLIN_KTLINT",
+            "KUBERNETES_KUBEVAL",
+            "MARKDOWN_MARKDOWNLINT",
+            "MARKDOWN_MARKDOWN_LINK_CHECK",
+            "OPENAPI_SPECTRAL",
+            "PROTOBUF_PROTOLINT",
+            "SNAKEMAKE_LINT",
+            "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
+            "SPELL_CSPELL",
+            "SQL_SQL_LINT",
+            "TEKTON_TEKTON_LINT",
+            "XML_XMLLINT",
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "dotnet": {
@@ -65,6 +126,7 @@
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -74,12 +136,14 @@
             "PROTOBUF_PROTOLINT",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
             "VBDOTNET_DOTNET_FORMAT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "go": {
@@ -106,6 +170,7 @@
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -114,11 +179,13 @@
             "PROTOBUF_PROTOLINT",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "java": {
@@ -145,6 +212,7 @@
             "HTML_HTMLHINT",
             "JAVA_CHECKSTYLE",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -153,11 +221,13 @@
             "PROTOBUF_PROTOLINT",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "javascript": {
@@ -187,6 +257,7 @@
             "JAVASCRIPT_ES",
             "JAVASCRIPT_STANDARD",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "JSX_ESLINT",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
@@ -196,6 +267,7 @@
             "PROTOBUF_PROTOLINT",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
@@ -203,7 +275,8 @@
             "TYPESCRIPT_ES",
             "TYPESCRIPT_STANDARD",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "php": {
@@ -229,6 +302,7 @@
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -241,11 +315,13 @@
             "PROTOBUF_PROTOLINT",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "python": {
@@ -270,6 +346,7 @@
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -285,11 +362,13 @@
             "RST_RSTFMT",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "ruby": {
@@ -315,6 +394,7 @@
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -324,11 +404,13 @@
             "RUBY_RUBOCOP",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "rust": {
@@ -354,6 +436,7 @@
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -363,11 +446,55 @@
             "RUST_CLIPPY",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
+        ]
+    },
+    "salesforce": {
+        "descriptors": [
+            "GIT",
+            "SALESFORCE"
+        ],
+        "label": "Mega-Linter optimized for Salesforce based projects",
+        "linters": [
+            "ANSIBLE_ANSIBLE_LINT",
+            "BASH_EXEC",
+            "BASH_SHELLCHECK",
+            "BASH_SHFMT",
+            "COPYPASTE_JSCPD",
+            "CSS_STYLELINT",
+            "CSS_SCSS_LINT",
+            "DOCKERFILE_DOCKERFILELINT",
+            "DOCKERFILE_HADOLINT",
+            "EDITORCONFIG_EDITORCONFIG_CHECKER",
+            "ENV_DOTENV_LINTER",
+            "GIT_GIT_DIFF",
+            "GRAPHQL_GRAPHQL_SCHEMA_LINTER",
+            "GROOVY_NPM_GROOVY_LINT",
+            "HTML_HTMLHINT",
+            "JSON_JSONLINT",
+            "JSON_V8R",
+            "KOTLIN_KTLINT",
+            "KUBERNETES_KUBEVAL",
+            "MARKDOWN_MARKDOWNLINT",
+            "MARKDOWN_MARKDOWN_LINK_CHECK",
+            "OPENAPI_SPECTRAL",
+            "PROTOBUF_PROTOLINT",
+            "SALESFORCE_SFDX_SCANNER",
+            "SNAKEMAKE_LINT",
+            "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
+            "SPELL_CSPELL",
+            "SQL_SQL_LINT",
+            "TEKTON_TEKTON_LINT",
+            "XML_XMLLINT",
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "scala": {
@@ -393,6 +520,7 @@
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -402,11 +530,13 @@
             "SCALA_SCALAFIX",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     },
     "terraform": {
@@ -431,6 +561,7 @@
             "GROOVY_NPM_GROOVY_LINT",
             "HTML_HTMLHINT",
             "JSON_JSONLINT",
+            "JSON_V8R",
             "KOTLIN_KTLINT",
             "KUBERNETES_KUBEVAL",
             "MARKDOWN_MARKDOWNLINT",
@@ -439,6 +570,7 @@
             "PROTOBUF_PROTOLINT",
             "SNAKEMAKE_LINT",
             "SNAKEMAKE_SNAKEFMT",
+            "SPELL_MISSPELL",
             "SPELL_CSPELL",
             "SQL_SQL_LINT",
             "TEKTON_TEKTON_LINT",
@@ -446,7 +578,8 @@
             "TERRAFORM_TERRASCAN",
             "TERRAFORM_TERRAGRUNT",
             "XML_XMLLINT",
-            "YAML_YAMLLINT"
+            "YAML_YAMLLINT",
+            "YAML_V8R"
         ]
     }
 }

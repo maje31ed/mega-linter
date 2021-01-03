@@ -50,7 +50,7 @@ class ConsoleReporter(Reporter):
         logging.info("")
 
     def produce_report(self):
-        table_header = ["Descriptor", "Linter", "Found", "Fixed", "Errors"]
+        table_header = ["Descriptor", "Linter", "Files", "Fixed", "Errors"]
         if self.master.show_elapsed_time is True:
             table_header += ["Elapsed time"]
         table_data = [table_header]
@@ -59,15 +59,22 @@ class ConsoleReporter(Reporter):
                 nb_fixed_cell = (
                     str(linter.number_fixed) if linter.try_fix is True else ""
                 )
+                status = (
+                    "✅"
+                    if linter.status == "success" and linter.return_code == 0
+                    else ":orange_circle:"
+                    if linter.status != "success" and linter.return_code == 0
+                    else "❌"
+                )
+                errors = str(linter.total_number_errors)
                 if linter.cli_lint_mode == "project":
                     found = "project"
-                    errors = "yes" if linter.number_errors > 0 else "no"
                     nb_fixed_cell = "yes" if nb_fixed_cell != "" else nb_fixed_cell
                 else:
                     found = str(len(linter.files))
-                    errors = str(linter.number_errors)
+
                 table_line = [
-                    linter.descriptor_id,
+                    status + " " + linter.descriptor_id,
                     linter.linter_name,
                     found,
                     nb_fixed_cell,
@@ -78,6 +85,14 @@ class ConsoleReporter(Reporter):
                 table_data += [table_line]
         table = terminaltables.AsciiTable(table_data)
         table.title = "----SUMMARY"
+        table.justify_columns = {
+            0: "left",
+            1: "left",
+            2: "right",
+            3: "right",
+            4: "right",
+            5: "right",
+        }
         # Output table in console
         logging.info("")
         for table_line in table.table.splitlines():

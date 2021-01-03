@@ -10,7 +10,7 @@ import os
 import sys
 
 import git
-from megalinter import config, flavor_factory, linter_factory, utils
+from megalinter import config, flavor_factory, linter_factory, plugin_factory, utils
 from multiprocessing_logging import install_mp_handler
 
 
@@ -32,7 +32,8 @@ class Megalinter:
         config.init_config(self.workspace)  # Initialize runtime config
         self.github_workspace = config.get("GITHUB_WORKSPACE", self.workspace)
         self.report_folder = config.get(
-            "REPORT_OUTPUT_FOLDER", self.github_workspace + os.path.sep + "report"
+            "REPORT_OUTPUT_FOLDER",
+            config.get("OUTPUT_FOLDER", self.github_workspace + os.path.sep + "report"),
         )
         self.initialize_logger()
         self.display_header()
@@ -77,6 +78,8 @@ class Megalinter:
         self.return_code = 0
         self.has_updated_sources = 0
         self.flavor_suggestions = None
+        # Initialize plugins
+        plugin_factory.initialize_plugins()
         # Initialize linters and gather criteria to browse files
         self.load_linters()
         self.compute_file_extensions()
@@ -102,9 +105,11 @@ class Megalinter:
         for reporter in self.reporters:
             reporter.initialize()
 
-        # Exit with error message if not all active linters are covered by current Mega-linter image flavor
+        # Display warning if selected flavors does not match all linters
         if flavor_factory.check_active_linters_match_flavor(active_linters) is False:
-            return
+            active_linters = [
+                linter for linter in active_linters if linter.is_active is True
+            ]
 
         if config.get("PARALLEL", "true") == "true" and len(active_linters) > 1:
             self.process_linters_parallel(active_linters, linters_do_fixes)
@@ -501,10 +506,10 @@ class Megalinter:
     def check_results(self):
         print(f"::set-output name=has_updated_sources::{str(self.has_updated_sources)}")
         if self.status == "success":
-            logging.info("Successfully linted all files without errors")
+            logging.info("✅ Successfully linted all files without errors")
             config.delete()
         else:
-            logging.error("Error(s) have been found during linting")
+            logging.error("❌ Error(s) have been found during linting")
             logging.warning(
                 "To disable linters or customize their checks, you can use a .mega-linter.yml file "
                 "at the root of your repository"

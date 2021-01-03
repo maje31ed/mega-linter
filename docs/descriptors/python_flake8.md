@@ -15,8 +15,8 @@
 
 ## Configuration in Mega-Linter
 
-- Enable flake8 by adding `PYTHON_FLAKE8` in [ENABLE_LINTERS variable](/configuration/#activation-and-deactivation)
-- Disable flake8 by adding `PYTHON_FLAKE8` in [DISABLE_LINTERS variable](/configuration/#activation-and-deactivation)
+- Enable flake8 by adding `PYTHON_FLAKE8` in [ENABLE_LINTERS variable](https://nvuillam.github.io/mega-linter/configuration/#activation-and-deactivation)
+- Disable flake8 by adding `PYTHON_FLAKE8` in [DISABLE_LINTERS variable](https://nvuillam.github.io/mega-linter/configuration/#activation-and-deactivation)
 
 | Variable | Description | Default value |
 | ----------------- | -------------- | -------------- |
@@ -33,11 +33,11 @@
 
 Use flake8 in your favorite IDE to catch errors before Mega-Linter !
 
-| <!-- --> | IDE | Extension Name |
-| :--: | ----------------- | -------------- |
-| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/atom.ico" alt="" height="32px" class="megalinter-icon"></a> | [Atom](https://atom.io/) | [linter-flake8](https://atom.io/packages/linter-flake8) |
-| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/idea.ico" alt="" height="32px" class="megalinter-icon"></a> | [IDEA](https://www.jetbrains.com/products.html#type=ide) | [flake8-support](https://plugins.jetbrains.com/plugin/11563-flake8-support) |
-| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/vscode.ico" alt="" height="32px" class="megalinter-icon"></a> | [Visual Studio Code](https://code.visualstudio.com/) | [Native Support](https://code.visualstudio.com/docs/python/linting#_flake8) |
+| <!-- --> | IDE | Extension Name | Install |
+| :--: | ----------------- | -------------- | :------: |
+| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/atom.ico" alt="" height="32px" class="megalinter-icon"></a> | [Atom](https://atom.io/) | [linter-flake8](https://atom.io/packages/linter-flake8) | [Visit Web Site](https://atom.io/packages/linter-flake8){target=_blank} |
+| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/idea.ico" alt="" height="32px" class="megalinter-icon"></a> | [IDEA](https://www.jetbrains.com/products.html#type=ide) | [flake8-support](https://plugins.jetbrains.com/plugin/11563-flake8-support) | <iframe frameborder="none" width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/11563"></iframe> |
+| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/vscode.ico" alt="" height="32px" class="megalinter-icon"></a> | [Visual Studio Code](https://code.visualstudio.com/) | [Native Support](https://code.visualstudio.com/docs/python/linting#_flake8) | [Visit Web Site](https://code.visualstudio.com/docs/python/linting#_flake8){target=_blank} |
 
 ## Mega-Linter Flavours
 
@@ -45,8 +45,8 @@ This linter is available in the following flavours
 
 | <!-- --> | Flavor | Description | Embedded linters | Info |
 | :------: | :----- | :---------- | :--------------: | ---: |
-| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/images/mega-linter-square.png" alt="" height="32px" class="megalinter-icon"></a> | [all](https://nvuillam.github.io/mega-linter/supported-linters/) | Default Mega-Linter Flavor | 72 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/nvuillam/mega-linter/v4) ![Docker Pulls](https://img.shields.io/docker/pulls/nvuillam/mega-linter) |
-| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/python.ico" alt="" height="32px" class="megalinter-icon"></a> | [python](https://nvuillam.github.io/mega-linter/flavors/python/) | Mega-Linter optimized for PYTHON based projects | 36 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/nvuillam/mega-linter-python/v4) ![Docker Pulls](https://img.shields.io/docker/pulls/nvuillam/mega-linter-python) |
+| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/images/mega-linter-square.png" alt="" height="32px" class="megalinter-icon"></a> | [all](https://nvuillam.github.io/mega-linter/supported-linters/) | Default Mega-Linter Flavor | 75 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/nvuillam/mega-linter/v4) ![Docker Pulls](https://img.shields.io/docker/pulls/nvuillam/mega-linter) |
+| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/python.ico" alt="" height="32px" class="megalinter-icon"></a> | [python](https://nvuillam.github.io/mega-linter/flavors/python/) | Mega-Linter optimized for PYTHON based projects | 39 | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/nvuillam/mega-linter-python/v4) ![Docker Pulls](https://img.shields.io/docker/pulls/nvuillam/mega-linter-python) |
 
 ## Behind the scenes
 
@@ -118,8 +118,8 @@ optional arguments:
                         of opening bracket's line.
   --ignore errors       Comma-separated list of errors and warnings to ignore
                         (or skip). For example, ``--ignore=E4,E51,W234``.
-                        (Default: ['E121', 'E704', 'W503', 'E226', 'E24',
-                        'E123', 'W504', 'E126'])
+                        (Default: ['E123', 'E24', 'W503', 'E121', 'E704',
+                        'E226', 'E126', 'W504'])
   --extend-ignore errors
                         Comma-separated list of errors and warnings to add to
                         the list of ignored ones. For example, ``--extend-

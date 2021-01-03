@@ -158,6 +158,7 @@ RUN npm install --no-cache --ignore-scripts \
                 babel-eslint \
                 standard@15.0.1 \
                 jsonlint \
+                v8r \
                 eslint-plugin-react \
                 markdownlint-cli \
                 markdown-link-check \
@@ -387,6 +388,11 @@ RUN sfdx plugins:install @salesforce/sfdx-scanner
 # scalafix installation
 RUN ./coursier install scalafix --quiet --install-dir /usr/bin
 
+# misspell installation
+RUN curl -L -o ./install-misspell.sh https://git.io/misspell \
+    && sh ./install-misspell.sh
+
+
 # tflint installation
 COPY --from=tflint /usr/local/bin/tflint /usr/bin/
 
@@ -415,8 +421,6 @@ RUN python /megalinter/setup.py install
 #######################################
 # Copy scripts and rules to container #
 #######################################
-COPY lib /action/lib
-# COPY megalinter /megalinter
 COPY megalinter/descriptors /megalinter-descriptors
 COPY TEMPLATES /action/lib/.automation
 

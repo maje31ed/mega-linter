@@ -94,6 +94,7 @@ RUN npm install --no-cache --ignore-scripts \
                 npm-groovy-lint \
                 htmlhint \
                 jsonlint \
+                v8r \
                 markdownlint-cli \
                 markdown-link-check \
                 @stoplight/spectral@5.6.0 \
@@ -173,6 +174,11 @@ RUN wget https://github.com/instrumenta/kubeval/releases/latest/download/kubeval
 # protolint installation
 COPY --from=protolint /usr/local/bin/protolint /usr/bin/
 
+# misspell installation
+RUN curl -L -o ./install-misspell.sh https://git.io/misspell \
+    && sh ./install-misspell.sh
+
+
 #OTHER__END
 
 ######################
@@ -191,8 +197,6 @@ RUN python /megalinter/setup.py install
 #######################################
 # Copy scripts and rules to container #
 #######################################
-COPY lib /action/lib
-# COPY megalinter /megalinter
 COPY megalinter/descriptors /megalinter-descriptors
 COPY TEMPLATES /action/lib/.automation
 

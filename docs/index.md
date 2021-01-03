@@ -4,22 +4,27 @@
 <!-- header-logo-start -->
 <div align="center">
   <a href="https://nvuillam.github.io/mega-linter" target="blank" title="Visit Mega-Linter Web Site">
-    <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/images/mega-linter-logo.png" alt="Mega-Linter" height="300px">
+    <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/images/mega-linter-logo.png" alt="Mega-Linter" height="200px">
   </a>
 </div>
 <!-- header-logo-end -->
+<!-- mega-linter-title-start -->
 
-## Mega-Linter
+<!-- mega-linter-title-end -->
 
 ![GitHub release](https://img.shields.io/github/v/release/nvuillam/mega-linter?sort=semver)
 [![Docker Pulls](https://img.shields.io/docker/pulls/nvuillam/mega-linter)](https://hub.docker.com/r/nvuillam/mega-linter)
-[![Mega-Linter](https://github.com/nvuillam/mega-linter/workflows/Mega-Linter/badge.svg?branch=master)](https://nvuillam.github.io/mega-linter)
-[![codecov](https://codecov.io/gh/nvuillam/mega-linter/branch/master/graph/badge.svg)](https://codecov.io/gh/nvuillam/mega-linter)
+[![Downloads/week](https://img.shields.io/npm/dw/mega-linter-runner.svg)](https://npmjs.org/package/mega-linter-runner)
+[![Mega-Linter](https://github.com/nvuillam/mega-linter/workflows/Mega-Linter/badge.svg?branch=master)](https://github.com/nvuillam/mega-linter/actions?query=workflow%3AMega-Linter+branch%3Amaster)[![codecov](https://codecov.io/gh/nvuillam/mega-linter/branch/master/graph/badge.svg)](https://codecov.io/gh/nvuillam/mega-linter)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check+Mega-Linter+to+say+goodbye+to+dirty+code+in+your+projects+%3A%29+100%25+free+and+open+source+for+all+uses&url=https://nvuillam.github.io/mega-linter/&via=NicolasVuillamy&hashtags=linters,code,quality,ci,python,java,golang,c,dotnet,kotlin,rust,scala,salesforce,terraform)
 <!-- [![Github All Releases](https://img.shields.io/github/downloads/nvuillam/mega-linter/total.svg)](https://github.com/users/nvuillam/packages/container/package/mega-linter) -->
 
 <!-- welcome-phrase-start -->
-**Mega-Linter** analyzes [**38 languages**](supported-linters.md#languages), [**15 formats**](supported-linters.md#formats), [**16 tooling formats**](supported-linters.md#tooling-formats) , [**abusive copy-pastes**](supported-linters.md#other) and [**spelling mistakes**](supported-linters.md#other) in your repository sources, generate [**reports in several formats**](reporters.md), and can even [**apply formatting and auto-fixes**](configuration.md#apply-fixes) with **auto-generated commit or PR**, to ensure all your projects are clean, whatever IDE/toolbox are used by their developers !
+Mega-Linter is an **100% Open-Source tool for CI/CD workflows** that **analyzes consistency and quality** of [**38** languages](supported-linters.md#languages), [**17** formats](supported-linters.md#formats), [**16** tooling formats](supported-linters.md#tooling-formats) , [**abusive copy-pastes**](supported-linters.md#other) and [**spelling mistakes**](supported-linters.md#other) in your repository sources, generates [**various reports**](reporters.md), and can even [apply **formatting** and **auto-fixes**](configuration.md#apply-fixes), to **ensure all your projects sources are clean**, whatever IDE/toolbox are used by their developers.
+
+Ready to use [out of the box](installation.md) as a **GitHub Action** or **any CI system**, [**highly configurable**](configuration.md) and **free for all uses**
+
 <!-- welcome-phrase-end -->
 
 <!-- online-doc-start -->
@@ -41,25 +46,19 @@ By using [**code formatters and code linters**](supported-linters.md), you ensur
 
 Not all developers have the good habit to use linters in their IDEs, making code reviews harder and longer to process
 
-By using **Mega-Linter**, you ensure that:
+By using **Mega-Linter**, you'll enjoy the following benefits for you and your team:
 
 - At **each pull request** it will **automatically analyze all updated code in all languages**
-- **Reading error logs**, **developers learn best practices** of the language they are using
+- Reading error logs, **developers learn best practices** of the language they are using
 - [**Mega-Linter documentation**](https://nvuillam.github.io/mega-linter/) provides the **list of IDE plugins integrating each linter**, so developers know which linter and plugins to install
-- Mega-Linter is **ready our of the box** after a [**quick setup**](quick-start.md)
+- Mega-Linter is **ready out of the box** after a [**quick setup**](quick-start.md)
 - **Formatting and fixes** can be automatically [**applied on the git branch**](configuration.md#apply-fixes) or [**provided in reports**](reporters/UpdatedSourcesReporter.md)
 - This tool is **100% open-source** and **free for all uses** (personal, professional, public and private repositories)
-- Mega-Linter can run on [**any CI tool**](installation.md) and be **run locally**: **no need to authorize an external application**, and **your code base never leaves your tooling ecosystem**
+- Mega-Linter can run on [**any CI tool**](installation.md) and be [**run locally**](https://nvuillam.github.io/mega-linter/mega-linter-runner/): **no need to authorize an external application**, and **your code base never leaves your tooling ecosystem**
 
 <!-- quick-start-section-start -->
 
 <!-- quick-start-section-end -->
-
-<!-- demo-section-start -->
-## Demo
-
-![Demo Gif](https://github.com/nvuillam/mega-linter/blob/master/docs/assets/images/demo_with_comments.gif?raw=true)
-<!-- demo-section-end -->
 
 <!-- supported-linters-section-start -->
 ## Supported Linters
@@ -71,7 +70,7 @@ All linters are integrated in the [Mega-Linter docker image](https://hub.docker.
 ### Languages
 
 | <!-- --> | Language | Linter | Configuration key | Format/Fix |
-| :---: | ----------------- | -------------- | ------------ | ------- |
+| :---: | ----------------- | -------------- | ------------ | :-----: |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/bash.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**BASH**](descriptors/bash.md#readme) | [bash-exec](descriptors/bash_bash_exec.md#readme)| [BASH_EXEC](descriptors/bash_bash_exec.md#readme)|  |
 | <!-- --> <!-- linter-icon --> |  | [shellcheck](descriptors/bash_shellcheck.md#readme)| [BASH_SHELLCHECK](descriptors/bash_shellcheck.md#readme)|  |
 | <!-- --> <!-- linter-icon --> |  | [shfmt](descriptors/bash_shfmt.md#readme)| [BASH_SHFMT](descriptors/bash_shfmt.md#readme)| :heavy_check_mark: |
@@ -114,13 +113,14 @@ All linters are integrated in the [Mega-Linter docker image](https://hub.docker.
 ### Formats
 
 | <!-- --> | Format | Linter | Configuration key | Format/Fix |
-| :---: | ----------------- | -------------- | ------------ | ------- |
+| :---: | ----------------- | -------------- | ------------ | :-----: |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/css.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**CSS**](descriptors/css.md#readme) | [stylelint](descriptors/css_stylelint.md#readme)| [CSS_STYLELINT](descriptors/css_stylelint.md#readme)| :heavy_check_mark: |
 | <!-- --> <!-- linter-icon --> |  | [scss-lint](descriptors/css_scss_lint.md#readme)| [CSS_SCSS_LINT](descriptors/css_scss_lint.md#readme)|  |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/env.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**ENV**](descriptors/env.md#readme) | [dotenv-linter](descriptors/env_dotenv_linter.md#readme)| [ENV_DOTENV_LINTER](descriptors/env_dotenv_linter.md#readme)| :heavy_check_mark: |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/graphql.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**GRAPHQL**](descriptors/graphql.md#readme) | [graphql-schema-linter](descriptors/graphql_graphql_schema_linter.md#readme)| [GRAPHQL_GRAPHQL_SCHEMA_LINTER](descriptors/graphql_graphql_schema_linter.md#readme)|  |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/html.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**HTML**](descriptors/html.md#readme) | [htmlhint](descriptors/html_htmlhint.md#readme)| [HTML_HTMLHINT](descriptors/html_htmlhint.md#readme)|  |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/json.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**JSON**](descriptors/json.md#readme) | [jsonlint](descriptors/json_jsonlint.md#readme)| [JSON_JSONLINT](descriptors/json_jsonlint.md#readme)|  |
+| <!-- --> <!-- linter-icon --> |  | [v8r](descriptors/json_v8r.md#readme)| [JSON_V8R](descriptors/json_v8r.md#readme)|  |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/latex.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**LATEX**](descriptors/latex.md#readme) | [chktex](descriptors/latex_chktex.md#readme)| [LATEX_CHKTEX](descriptors/latex_chktex.md#readme)|  |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/markdown.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**MARKDOWN**](descriptors/markdown.md#readme) | [markdownlint](descriptors/markdown_markdownlint.md#readme)| [MARKDOWN_MARKDOWNLINT](descriptors/markdown_markdownlint.md#readme)| :heavy_check_mark: |
 | <!-- --> <!-- linter-icon --> |  | [markdown-link-check](descriptors/markdown_markdown_link_check.md#readme)| [MARKDOWN_MARKDOWN_LINK_CHECK](descriptors/markdown_markdown_link_check.md#readme)|  |
@@ -130,11 +130,12 @@ All linters are integrated in the [Mega-Linter docker image](https://hub.docker.
 | <!-- --> <!-- linter-icon --> |  | [rstfmt](descriptors/rst_rstfmt.md#readme)| [RST_RSTFMT](descriptors/rst_rstfmt.md#readme)| :heavy_check_mark: |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/xml.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**XML**](descriptors/xml.md#readme) | [xmllint](descriptors/xml_xmllint.md#readme)| [XML_XMLLINT](descriptors/xml_xmllint.md#readme)|  |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/yaml.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**YAML**](descriptors/yaml.md#readme) | [yamllint](descriptors/yaml_yamllint.md#readme)| [YAML_YAMLLINT](descriptors/yaml_yamllint.md#readme)|  |
+| <!-- --> <!-- linter-icon --> |  | [v8r](descriptors/yaml_v8r.md#readme)| [YAML_V8R](descriptors/yaml_v8r.md#readme)|  |
 
 ### Tooling formats
 
 | <!-- --> | Tooling format | Linter | Configuration key | Format/Fix |
-| :---: | ----------------- | -------------- | ------------ | ------- |
+| :---: | ----------------- | -------------- | ------------ | :-----: |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/ansible.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**ANSIBLE**](descriptors/ansible.md#readme) | [ansible-lint](descriptors/ansible_ansible_lint.md#readme)| [ANSIBLE_ANSIBLE_LINT](descriptors/ansible_ansible_lint.md#readme)|  |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/arm.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**ARM**](descriptors/arm.md#readme) | [arm-ttk](descriptors/arm_arm_ttk.md#readme)| [ARM_ARM_TTK](descriptors/arm_arm_ttk.md#readme)|  |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/cloudformation.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**CLOUDFORMATION**](descriptors/cloudformation.md#readme) | [cfn-lint](descriptors/cloudformation_cfn_lint.md#readme)| [CLOUDFORMATION_CFN_LINT](descriptors/cloudformation_cfn_lint.md#readme)|  |
@@ -155,10 +156,11 @@ All linters are integrated in the [Mega-Linter docker image](https://hub.docker.
 ### Other
 
 | <!-- --> | Code quality checker | Linter | Configuration key | Format/Fix |
-| :---: | ----------------- | -------------- | ------------ | ------- |
+| :---: | ----------------- | -------------- | ------------ | :-----: |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/copypaste.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**COPYPASTE**](descriptors/copypaste.md#readme) | [jscpd](descriptors/copypaste_jscpd.md#readme)| [COPYPASTE_JSCPD](descriptors/copypaste_jscpd.md#readme)|  |
 | <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/git.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**GIT**](descriptors/git.md#readme) | [git_diff](descriptors/git_git_diff.md#readme)| [GIT_GIT_DIFF](descriptors/git_git_diff.md#readme)|  |
-| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/spell.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**SPELL**](descriptors/spell.md#readme) | [cspell](descriptors/spell_cspell.md#readme)| [SPELL_CSPELL](descriptors/spell_cspell.md#readme)|  |
+| <img src="https://github.com/nvuillam/mega-linter/raw/master/docs/assets/icons/spell.ico" alt="" height="32px" class="megalinter-icon"></a> <!-- linter-icon --> | [**SPELL**](descriptors/spell.md#readme) | [misspell](descriptors/spell_misspell.md#readme)| [SPELL_MISSPELL](descriptors/spell_misspell.md#readme)| :heavy_check_mark: |
+| <!-- --> <!-- linter-icon --> |  | [cspell](descriptors/spell_cspell.md#readme)| [SPELL_CSPELL](descriptors/spell_cspell.md#readme)|  |
 
 <!-- linters-table-end -->
 <!-- supported-linters-section-end -->
@@ -183,11 +185,22 @@ All linters are integrated in the [Mega-Linter docker image](https://hub.docker.
 
 <!-- badge-section-end -->
 
+<!-- plugins-section-start -->
+
+<!-- plugins-section-end -->
+
+<!-- frequently-asked-questions-section-start -->
+
+<!-- frequently-asked-questions-section-end -->
+
 <!-- how-to-contribute-section-start -->
 
 <!-- how-to-contribute-section-end -->
 
----
+<!-- special-thanks-section-start -->
+
+<!-- special-thanks-section-end -->
+
 <!-- license-section-start -->
 
 <!-- license-section-end -->

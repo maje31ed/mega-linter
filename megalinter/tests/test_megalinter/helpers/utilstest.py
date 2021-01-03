@@ -44,6 +44,7 @@ def linter_test_setup(params=None):
     # TAP Output deactivated by default
     config.set_value("OUTPUT_FORMAT", "text")
     config.set_value("OUTPUT_DETAIL", "detailed")
+    config.set_value("PLUGINS", "")
     # Root path of default rules
     root_dir = (
         "/tmp/lint"
@@ -194,7 +195,7 @@ def test_linter_failure(linter, test_self):
     else:
         test_self.assertRegex(
             output,
-            rf"Linted \[{linter.descriptor_id}\] files with \[{linter_name}\]: Found error",
+            rf"Linted \[{linter.descriptor_id}\] files with \[{linter_name}\]: Found",
         )
     # Check text reporter output log
     report_file_name = f"ERROR-{linter.name}.log"
